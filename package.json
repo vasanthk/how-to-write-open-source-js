@@ -1,10 +1,12 @@
 {
   "name": "how-to-write-open-source-js",
-  "version": "1.2.0-beta.0",
+  "version": "0.0.0-semantically-released",
   "description": "Code from Egghead.io [course](https://egghead.io/lessons/javascript-how-to-write-a-javascript-library-introduction?series=how-to-write-an-open-source-javascript-library) on \"How to write an Open Source JavaScript Library\"",
   "main": "src/index.js",
   "scripts": {
-    "test": "mocha src/index.test.js -w"
+    "commit": "git-cz",
+    "test": "mocha src/index.test.js -w",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
   "repository": {
     "type": "git",
@@ -27,6 +29,12 @@
   },
   "devDependencies": {
     "chai": "3.4.0",
-    "mocha": "2.3.3"
+    "commitizen": "2.3.0",
+    "cz-conventional-changelog": "1.1.4",
+    "mocha": "2.3.3",
+    "semantic-release": "^4.3.5"
+  },
+  "czConfig": {
+    "path": "node_modules/cz-conventional-changelog"
   }
 }
