@@ -2,13 +2,16 @@
   "name": "how-to-write-open-source-js",
   "version": "0.0.0-semantically-released",
   "description": "Code from Egghead.io [course](https://egghead.io/lessons/javascript-how-to-write-a-javascript-library-introduction?series=how-to-write-an-open-source-javascript-library) on \"How to write an Open Source JavaScript Library\"",
-  "main": "src/index.js",
+  "main": "dist/index.js",
   "scripts": {
+    "prebuild": "rm -rf dist && mkdir dist",
+    "build": "babel src/index.js -o dist/index.js",
+    "postbuild": "cp src/starwars-names.json dist/starwars-names.json",
     "commit": "git-cz",
     "check-coverage": "istanbul check-coverage --statements 70 --branches 70 --functions 70 --lines 70",
     "report-coverage": "cat ./coverage/lcov.info | codecov",
-    "test": "mocha src/index.test.js -w",
-    "test:single": "istanbul cover -x *.test.js _mocha -- -R spec src/index.test.js",
+    "test": "mocha src/index.test.js -w --compilers js:babel/register",
+    "test:single": "istanbul cover -x *.test.js _mocha -- -R spec src/index.test.js --compilers js:babel/register",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
   "repository": {
@@ -31,6 +34,7 @@
     "unique-random-array": "1.0.0"
   },
   "devDependencies": {
+    "babel": "5.8.29",
     "chai": "3.4.0",
     "codecov.io": "0.1.6",
     "commitizen": "2.3.0",
