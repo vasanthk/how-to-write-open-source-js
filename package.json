@@ -1,6 +1,6 @@
 {
   "name": "how-to-write-open-source-js",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Code from Egghead.io [course](https://egghead.io/lessons/javascript-how-to-write-a-javascript-library-introduction?series=how-to-write-an-open-source-javascript-library) on \"How to write an Open Source JavaScript Library\"",
   "main": "src/index.js",
   "scripts": {
