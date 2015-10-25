@@ -1,0 +1,28 @@
+{
+  "name": "how-to-write-open-source-js",
+  "version": "1.0.0",
+  "description": "Code from Egghead.io [course](https://egghead.io/lessons/javascript-how-to-write-a-javascript-library-introduction?series=how-to-write-an-open-source-javascript-library) on \"How to write an Open Source JavaScript Library\"",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vasanthk/how-to-write-open-source-js.git"
+  },
+  "keywords": [
+    "random",
+    "star",
+    "wars",
+    "opensource"
+  ],
+  "author": "Vasanth Krishnamoorthy <vasa.httpster@gmail.com> (http://www.vasanthk.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vasanthk/how-to-write-open-source-js/issues"
+  },
+  "homepage": "https://github.com/vasanthk/how-to-write-open-source-js",
+  "dependencies": {
+    "unique-random-array": "1.0.0"
+  }
+}
