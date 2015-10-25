@@ -13,15 +13,23 @@ describe('starwars-names', function () {
       }
     });
 
-    it('should contain "Vasa"', function() {
+    it('should contain "Vasa"', function () {
       expect(starWars.all).to.include('Vasa');
-    })
+    });
   });
 
-  describe('random', function() {
-    it('should return a random item from the starWars.all', function() {
+  describe('random', function () {
+    it('should return a random item from the starWars.all', function () {
       var randomCharacter = starWars.random();
       expect(starWars.all).to.include(randomCharacter);
+    });
+
+    it('should return an array of random items if passed a number', function () {
+      var randomCharacters = starWars.random(3);
+      expect(randomCharacters).to.have.length(3);
+      randomCharacters.forEach(function (item) {
+        expect(starWars.all).to.include(item);
+      })
     })
   })
 });
