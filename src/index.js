@@ -14,6 +14,10 @@ function random(number) {
   }
 }
 
+function doSomething() {
+  console.log('Hi');
+}
+
 module.exports = {
   all: starWarsNames,
   random: random
