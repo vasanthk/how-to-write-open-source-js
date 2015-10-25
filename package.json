@@ -6,7 +6,7 @@
   "scripts": {
     "commit": "git-cz",
     "check-coverage": "istanbul check-coverage --statements 70 --branches 70 --functions 70 --lines 70",
-    "report-coverage": "cat ./covrage/lcov.infon | codecov",
+    "report-coverage": "cat ./coverage/lcov.infon | codecov",
     "test": "mocha src/index.test.js -w",
     "test:single": "istanbul cover -x *.test.js _mocha -- -R spec src/index.test.js",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post"
